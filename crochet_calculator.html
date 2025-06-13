@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RajutMate - Kalkulator HPP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">RajutMate</div>
+            <ul class="nav-links">
+                <li><a href="#calculator">Kalkulator</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Dari Benang ke Cuan,<br>Semuanya Keitungan!</h1>
+                <p class="hero-subtitle">Rajut Aja, Hitungnya Biar RajutMate yang Urus!</p>
+                <a href="#calculator" class="cta-button">Mulai Hitung HPP</a>
+            </div>
+            
+            <div class="hero-image">
+                <svg class="hero-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <img src="icon/calculatorApp (1).png" width="500" height="400">
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Kalkulator Section -->
+    <section class="calculator" id="calculator">
+    <div class="container">
+        <div class="header">
+            <h1>Kalkulator HPP</h1>
+        </div>
+
+        <div class="section">
+            <h2>Barang Pokok</h2>
+            <div id="basic-items">
+                <div class="item-row">
+                    <input type="text" placeholder="Nama Barang" class="item-name">
+                    <input type="number" placeholder="Jumlah" class="item-quantity">
+                    <input type="number" placeholder="Harga" class="item-price">
+                    <button type="button" class="remove-btn" onclick="removeItem(this)">✕</button>
+                </div>
+            </div>
+            <button type="button" class="add-btn" onclick="addBasicItem()">
+                <span>+</span> Tambah Barang Pokok
+            </button>
+        </div>
+
+        <div class="section">
+            <h2>Barang Pelengkap</h2>
+            <div id="additional-items">
+                <div class="item-row">
+                    <input type="text" placeholder="Nama Barang" class="item-name">
+                    <input type="number" placeholder="Jumlah" class="item-quantity">
+                    <input type="number" placeholder="Harga" class="item-price">
+                    <button type="button" class="remove-btn" onclick="removeItem(this)">✕</button>
+                </div>
+            </div>
+            <button type="button" class="add-btn" onclick="addAdditionalItem()">
+                <span>+</span> Tambah Barang Pelengkap
+            </button>
+        </div>
+
+        <div class="section">
+            <h2>Biaya Tenaga Kerja</h2>
+            <div class="labor-section">
+                <div class="labor-field">
+                    <label>Upah Kerja per Jam (Rp)</label>
+                    <input type="number" id="hourly-wage" placeholder="0">
+                </div>
+                <div class="labor-field">
+                    <label>Waktu yang Digunakan (menit)</label>
+                    <input type="number" id="work-time" placeholder="0">
+                </div>
+            </div>
+            <button type="button" class="calculate-btn" onclick="calculateTotal()">Hitung HPP</button>
+        </div>
+
+        <div class="section">
+            <h2>Hasil Perhitungan</h2>
+            <div class="result-section" id="result-area">
+                <div class="result-content" id="result-content">
+                    <!-- Results will be populated here -->
+                </div>
+            </div>
+            <button type="button" class="download-btn" onclick="downloadResult()">
+                Unduh Hasil Perhitungan (.png)
+            </button>
+        </div>
+    </div>
+    </section>
+
+    <!-- About Section Preview -->
+    <section class="about-preview" id="about">
+        <div class="about-container">
+            <h2 class="about-title">Tentang Kami</h2>
+            <p class="about-text">
+                RajutMate adalah platform yang dapat membantu para perajut dalam menentukan harga pokok karya rajutnya. Dengan fitur kalkulator HPP yang mudah digunakan, Anda dapat menghitung biaya bahan dan tenaga kerja dengan tepat menggunakan RajutMate!
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sarah-sr" target="_blank"  class="social-link"><img src="icon/mdi_linkedin.png" ></a>
+                <a href="https://www.instagram.com/yarniverse.bysar/" target="_blank" class="social-link"><img src="icon/mdi_instagram.png"></a>
+            </div>
+            <div style="margin-top: 40px; color: #333; font-weight: bold;">
+                <h3>RajutMate</h3>
+                <p style="color: #666; font-weight: normal; margin-top: 8px;">Dari Benang ke Cuan, Semuanya Keitungan!</p>
+                <p>&copy sarahSurya 2025 - MetoPen</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
